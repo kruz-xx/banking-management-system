@@ -36,3 +36,7 @@ print(df["Branch"].value_counts())
 
 print("\nCURRENCIES")
 print(df["Currency"].value_counts())
+
+print("\nUnique Customers:", df["Customer Name"].nunique())
+print("Unique Accounts:", df["Account ID"].nunique())
+
