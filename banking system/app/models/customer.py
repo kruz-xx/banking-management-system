@@ -7,12 +7,5 @@ class Customer:
         print(f"Customer ID: {self.customer_id}")
         print(f"Customer Name: {self.customer_name}")
         
-    customers = []
-    
-    for row in csv_file:
-        customer= Customer(
-            row["Customer ID"],
-            row["Customer Name"]
-        )
-        customers.append(customer)
+  
             
