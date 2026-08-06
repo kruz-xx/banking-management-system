@@ -1,4 +1,14 @@
+"""
+User Interface
+
+Displays the main menu of the Banking Management System.
+"""
+
 def display_menu():
+    """
+Displays all available banking operations
+to the user.
+"""
     print("\n" + "=" * 50)
     print("      BANKING MANAGEMENT SYSTEM")
     print("=" * 50)

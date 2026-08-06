@@ -1,3 +1,11 @@
+"""
+Main Application
+
+Entry point of the Banking Management System.
+Initializes the repository, loads data,
+creates service objects, and starts the menu loop.
+"""
+
 from database.csv_repo import CSVRepository
 
 from services.customer_service import CustomerService
@@ -6,12 +14,16 @@ from services.transaction_service import TransactionService
 
 from ui.menu import display_menu
 
+# Initialize the repository and services
 repo = CSVRepository()
 
+#Initialize service layer for each entity (Customer, Account, Transaction)
 customer_service = CustomerService()
 account_service = AccountService()
 transaction_service = TransactionService()
 
+
+#Load all data into memory from CSV files and populate the service layers
 for customer in repo.load_customers():
     customer_service.add_customer(customer)
 
@@ -22,6 +34,7 @@ for transaction in repo.load_transactions():
     transaction_service.add_transaction(transaction)
 
 while True:
+    #Main app loop that displays the menu until the user exits
 
     display_menu()
 
