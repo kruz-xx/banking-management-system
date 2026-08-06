@@ -67,7 +67,11 @@ while True:
     elif choice == "6":
         sender = input("Enter Sender Account ID: ")
         receiver = input("Enter Receiver Account ID: ")
-        amount = float(input("Enter amount to transfer: "))
+        try:
+            amount = float(input("Enter amount to transfer: "))
+        except ValueError:
+            print("Invalid amount. Please enter a valid number.")
+            continue
 
         account_service.transfer(sender, receiver, amount)
 
