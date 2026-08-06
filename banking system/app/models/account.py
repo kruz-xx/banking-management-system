@@ -8,10 +8,17 @@ class Account:
         self.currency = currency
 
     def deposit(self, amount):
+        if amount <= 0:
+            print("Deposit amount must be positive.")
+            return
+        
         self.balance += amount
         print(f"Deposited {amount} {self.currency}. New balance: {self.balance} {self.currency}.")
 
     def withdraw(self, amount):
+        if amount <= 0:
+            print("Withdrawal amount must be positive.")
+            return
         if amount > self.balance:
             print("Insufficient funds for withdrawal.")
         else:

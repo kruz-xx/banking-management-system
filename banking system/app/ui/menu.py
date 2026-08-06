@@ -1,0 +1,13 @@
+def display_menu():
+    print("\n" + "=" * 50)
+    print("      BANKING MANAGEMENT SYSTEM")
+    print("=" * 50)
+    print("1. View Customers")
+    print("2. View Accounts")
+    print("3. Search Account")
+    print("4. Deposit Money")
+    print("5. Withdraw Money")
+    print("6. Transfer Money")
+    print("7. View Transactions")
+    print("8. Exit")
+    print("=" * 50)
